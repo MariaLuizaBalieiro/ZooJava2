@@ -1,5 +1,5 @@
 package br.senai.sp.jandira.Model;
-
+import java.util.Scanner;
 public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -58,13 +58,6 @@ public class Menu {
                     saude.adicionarHistoricoMedico(animal.get(nomeAnimal), historico);
                     break;
                 case 4:
-                    System.out.print("Nome do animal: ");
-                    String nomeAnimal = scanner.nextLine();
-                    System.out.print("Data da última revisão: ");
-                    String dataRevisao = scanner.nextLine();
-                    saude.adicionarDataUltimaRevisao(Animal.get(nomeAnimal), dataRevisao);
-                    break;
-                case 5:
                     System.exit(0);
             }
         }
@@ -87,8 +80,5 @@ class Ave extends Animal {
     public Ave(String nome, int idade, char sexo, String identificacaoUnica) {
         super(nome, idade, sexo, identificacaoUnica);
     }
+
 }
-
-
-
-
